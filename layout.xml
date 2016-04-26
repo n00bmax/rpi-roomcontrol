@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout onLaunch="launch" onVolumeUp="com_toggle" color="#2EB0EB">
+	<tabs>
+			<tab text = "Home">
+					
+			
+				<row>
+					<button text="Start" ontap="kbstart" />
+					<button text="End" ontap="kbend" />
+				</row>
+				
+				
+				<row weight="4">
+					<dpad onTap="select" icon="select">
+						<item onTap="kup"/>
+						<item onTap="right"/>
+						<item onTap="kdown"/>
+						<item onTap="left"/>
+					</dpad>
+				</row>
+				
+				<row>
+					<button text="LED on" ontap="command1" />
+					<button text="LED off" ontap="command2" />
+				</row>
+				<row>
+					<slider id="vol" text="LED Brightness" onchange="volume_change"/>
+				</row>
+
+			</tab>
+	
+	
+			<tab text = "File Manager">
+				
+				<row weight="wrap">
+				      <button icon="back" onTap="back" />
+				      <button icon="more" onTap="goto" />
+				      <button icon="arrowup" onTap="up" />
+				      <button icon="home" onTap="home" />
+				      <button icon="refresh" onTap="refresh" />
+			   	 </row>
+
+				 <row>
+					<list id="list" onTap="item" onHold="hold" />
+				</row>
+			
+			</tab>
+			
+			
+			<tab text = "Home">
+					  <grid>
+						<row>
+							<touch id="touch"
+								ondown="down"
+								onup="up"
+								onhold="mhold"
+								ontap="tap" 
+								ondoubletap="double" 
+								ontouchdelta="delta"
+								text="Use this as a pointer for annotations.\n Tap to select." />
+						</row>
+						<row weight="wrap">
+							<button text="L" ontap="left" />
+							<button text="R" ontap="right" />
+						</row>
+					  </grid>
+			</tab>
+			
+			
+			
+			
+			
+			
+			
+			<tab text = "Home3">
+				
+				<row>
+					<toggle text = "Toggle Pen"/>
+				</row>
+				<row>
+					<button text="Undo" ontap="com_undo" />
+					<button text="Clear" ontap="com_clear"/>
+					<button text="Toggle" ontap="com_toggle" />
+				</row>
+			</tab>
+			
+			<tab text = "Home4">
+					
+				<row>
+					<button text="Projector on" ontap="projon" color="red" />
+					<button text="Projector off" ontap="projoff" color="red" />
+				</row>
+			
+			</tab>
+			
+			
+	</tabs>
+
+</layout>
+
+
+
+
+
+
+
+
+
